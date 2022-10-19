@@ -1,24 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        String phone = "+960-415-75 37";
-        phone = phone.replace("-", "");
-        phone = phone.replace(" ", "");
-        phone = phone.replace("+", "");
-        if (phone.length() == 10) {
-//            phone = '7' + phone;
-        } else if (phone.length() > 11) {
-            throw new RuntimeException("Телефон слишком длинный");
-        } else if (phone.length() < 10) {
-            throw new RuntimeException("Телефон слишком корткий");
-        } else if (phone.length() == 11 && phone.charAt(0) != '7') {
-            throw new RuntimeException("Среди нас посторонний");
-        }
-        System.out.println("phone = " + phone);
-        String expectedPhone = "79604157537";
-        if (phone.equals(expectedPhone)) {
-            System.out.println("Успех");
-        } else {
-            System.out.println("Неудача");
-        }
+        //        первая задача
+        String firstName = "Ivan";
+        String middleName = "Ivanov";
+        String lastName = "Ivanovich";
+        String fullName = middleName + " " + firstName + " " + lastName;
+        System.out.println("ФИО сотрудника " + fullName);
+//         вторая задача
+        String firstName1 = "Ivan";
+        String middleName1 = "Ivanov";
+        String lastName1 = "Ivanovich";
+        String fullName1 = middleName1 + " " + firstName1 + " " + lastName1;
+        String upperFullname1 = fullName1.toUpperCase();
+        System.out.println("Данные ФИО сотрудника для заполнения отчета " + upperFullname1);
+//        тертья задача
+        String fullName2 = "Иванов Семён Семёнович";
+        fullName2 = fullName2.replace("ё", "е");
+        System.out.println("Данные ФИО сотрудника " + fullName2);
     }
 }
